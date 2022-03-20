@@ -2,7 +2,7 @@
   <div>
     <div>
       <!-- <img src="../assets/logo.png"/> -->
-      <img class="" src="https://codeman666.oss-cn-beijing.aliyuncs.com/test/Snipaste_2022-01-12_15-19-41.jpg" height="470" width="1380" />
+      <img class="" src="https://codeman666.oss-cn-beijing.aliyuncs.com/test/Snipaste_2022-01-12_15-19-41.jpg" height="350" width="1535" />
     </div>
     <div>
       <!-- <img src="../assets/logo.png"/> -->
@@ -86,7 +86,7 @@
                     <section class="course-img">
                       <img :src="course.cover" class="img-responsive" :alt="course.title">
                       <div class="cc-mask">
-                        <a :href="'/course/'+course.id" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
+                        <a :href="'/course3/'+course.id" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
                       </div>
                     </section>
                     <h3 class="hLh30 txtOf mt10">

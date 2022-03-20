@@ -27,14 +27,12 @@
             <section class="c-attr-mt c-attr-undis">
               <span class="c-fff fsize14">主讲： {{ courseWebVo.teacherName }}&nbsp;&nbsp;&nbsp;</span>
             </section>
-            <section class="c-attr-mt of">
-              <span class="ml10 vam">
-                <em class="icon18 scIcon"></em>
-                <a class="c-fff vam" title="收藏" href="#">收藏</a>
-              </span>
-            </section>
             <section class="c-attr-mt" v-if="(Number(courseWebVo.price)==0||isBuy)&&isOpen">
               <a href="#" title="立即观看" class="comm-btn c-btn-3" @click="watchVideo()">立即观看</a>
+            </section>
+            <section class="c-attr-mt" v-if="(Number(courseWebVo.price)==0||isBuy)&&isOpen">
+              <a href="#" title="喜欢该课程" class="comm-btn c-btn-3" @click="watchVideo2()">喜欢该课程</a>
+              <a href="#" title="喜欢该讲师" class="comm-btn c-btn-3" @click="watchVideo3()">喜欢该讲师</a>
             </section>
             <section class="c-attr-mt" v-if="(Number(courseWebVo.price)!=0&&!isBuy)&&isOpen">
               <a href="#" title="立即购买" class="comm-btn c-btn-3" @click="createOrder()">立即购买</a>
@@ -266,6 +264,18 @@ export default {
         })
       }
 
+    },
+    watchVideo2(){
+      this.$message({
+          type: 'success',
+          message: '喜欢该课程成功'
+      })
+    },
+    watchVideo3(){
+      this.$message({
+          type: 'success',
+          message: '喜欢该讲师成功'
+      })
     },
     // 查询课程详情信息
     initCourseInfo() {

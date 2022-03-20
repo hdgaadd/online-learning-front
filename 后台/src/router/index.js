@@ -34,7 +34,7 @@ export const constantRoutes = [
     children: [{
       path: 'dashboard',
       component: () => import('@/views/dashboard/index'),
-      meta: { title: '谷粒学院后台首页', icon: 'dashboard' }
+      meta: { title: '在线学习平台管理', icon: 'dashboard' }
     }]
   }]
 /**
@@ -52,15 +52,15 @@ export const asyncRoutes = [
     children: [
       {
         path: 'create',
-        name: '生成数据',
+        name: '用户行为分析',
         component: () => import('@/views/edu/statistic/create'),
-        meta: {title: '生成数据', icon: 'tree'}
+        meta: {title: '用户行为分析', icon: 'tree'}
       },
       {
         path: 'show',
-        name: '图表显示',
+        name: '平台收入展示',
         component: () => import('@/views/edu/statistic/show'),
-        meta: {title: '图表显示', icon: 'table'}
+        meta: {title: '平台收入展示', icon: 'table'}
       }
     ]
   },
@@ -68,12 +68,12 @@ export const asyncRoutes = [
     path: '/teacher',
     component: Layout,
     redirect: '/teacher/list',
-    name: '讲师管理',
-    meta: {title: '讲师管理', icon: 'example'},
+    name: '讲师管理6',
+    meta: {title: '讲师管理66', icon: 'example'},
     children: [
       {
         path: 'list',
-        name: '讲师列表',
+        name: '讲师列表6',
         component: () => import('@/views/edu/teacher/list'),
         meta: {title: '讲师列表', icon: 'table'}
       },

@@ -1,8 +1,8 @@
 import request from '@/utils/request'
 export default {
-  getCourseList(current,limit,conditions) {
+  getCourseList(current,limit,catagoryid,conditions) {
     return request({
-      url: `/eduservice/coursefront/getFrontCourseList/${current}/${limit}`,
+      url: `/eduservice/coursefront/getFrontCourseList/${current}/${limit}/${catagoryid}`,
       method: 'post',
       data: conditions
     })

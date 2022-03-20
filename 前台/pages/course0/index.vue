@@ -167,7 +167,7 @@ export default {
   methods: {
     // 查询第一页数据
     initCourseFirst() {
-      courseApi.getCourseList(1, 8, this.searchObj).then(response => {
+      courseApi.getCourseList(1, 8, 0, this.searchObj).then(response => {
         this.data = response.data.data;
         console.log(response.data)
       })
@@ -183,7 +183,7 @@ export default {
     // 分页切换方法
     gotoPage(current) {
       if (current > this.data.pages) current = this.data.pages;
-      courseApi.getCourseList(current, 8, this.searchObj).then(response => {
+      courseApi.getCourseList(current, 8, 0, this.searchObj).then(response => {
         this.data = response.data.data
       })
     },

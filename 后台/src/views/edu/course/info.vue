@@ -39,6 +39,13 @@
             :label="subject.title"
             :value="subject.id"/>
         </el-select>
+
+        <el-select v-model="courseInfo0.subjectId" placeholder="课程类型">
+          <el-option label="公开课" value="0"> </el-option>
+          <el-option label="体验课" value="1"></el-option>
+          <el-option label="付费课" value="2"></el-option>
+        </el-select>
+
       </el-form-item>
 
 
@@ -116,6 +123,9 @@ export default {
         description: '',
         cover: '/static/default-course-cover.jpg',
         price: ''
+      },
+      courseInfo0: {
+        subjectId: ''
       },
       courseId: '',
       teacherList: [],
